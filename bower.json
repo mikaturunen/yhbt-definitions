@@ -1,0 +1,27 @@
+{
+  "name": "yhbt-definitions",
+  "version": "0.0.1",
+  "homepage": "https://github.com/mikaturunen/yhbt-definitions",
+  "authors": [
+    "Mika Turunen <mika.turunen@cybercom.com>"
+  ],
+  "description": "TypeDefinition files for You Have Been Tasked related modules and the project itself.",
+  "moduleType": [
+    "es6"
+  ],
+  "keywords": [
+    "YHBT",
+    "typescript",
+    "definition",
+    "component"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "release/frontend/bower/",
+    "test",
+    "tests"
+  ]
+}
