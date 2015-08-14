@@ -1,40 +1,40 @@
-
-// TODO add comments
-
 /**
- * Simple interface for a Task.
+ * Simple definitions for the different parts of the objects
  */
+
 interface Task {
     _id?: string;
-    teamId?: string;
+
+    /**
+     * Task owner. User.userId
+     */
     userId: string;
+
     title: string;
     description: string;
 
-    startLocation?: any;
-    endLocation?: any;
-
+    /**
+     * Stored planned events for the task in couples of two. [0,1,2,3,4] => 0 = start, 1 = end for first event,
+     * 2 = start for second event and 3 = end for second event. 4 = start of third event and the event has not stopped.
+     * This will be used for planning.
+     */
     plannedEvents: number[];
+
+    /**
+     * Follows the same scheme as plannedEvents for actual "when did the event happen".
+     * This will be used for informing when the evnet actually happened.
+     */
     actualEvents: number[];
 
-    done: boolean;
-
-    inventoryIds: string[];
+    /**
+     * Total spent time on actualEvents
+     */
+    spentTime: number;
 }
-
-/**
- * Interface for Team. Team collects Users under it as members.
- */
-interface Team {
-    _id?: string;
-    name: string;
-    memberIds: string[];
-    organizerIds: string[];
-}
-
 
 interface User {
     _id?: string;
+    userId: string;
     username: string;
     passwordHash: string;
 }
