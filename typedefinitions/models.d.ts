@@ -27,7 +27,7 @@ interface Task {
     actualEvents: number[];
 
     /**
-     * Total spent time on actualEvents
+     * Total spent time on actualEvents.
      */
     spentTime: number;
 }
